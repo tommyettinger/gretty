@@ -4,17 +4,21 @@ on: ['push', 'pull_request']
 
 jobs:
   build-and-test:
-    name: Java ${{ matrix.java }}
+    name: Gradle ${{ matrix.gradle }} on Java ${{ matrix.java }}
     runs-on: ubuntu-latest
     environment: Bintray
 
     strategy:
       matrix:
         java: [8, 11, 15]
+        gradle: ["6.8.3"]
+        include:
+          - java: 15
+            gradle: "7.0-rc-1"
 
     env:
       TEST_ALL_CONTAINERS: "['jetty9.3','jetty9.4','tomcat85','tomcat9']"
-      GRADLE_VERSION: 6.8.3
+      GRADLE_VERSION: ${{ matrix.gradle }}
       GECKO_DRIVER_VERSION: 0.28.0
       BINTRAY_REPO: maven
       BINTRAY_PACKAGE: org.gretty
