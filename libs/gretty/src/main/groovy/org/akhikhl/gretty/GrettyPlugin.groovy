@@ -171,7 +171,6 @@ class GrettyPlugin implements Plugin<Project> {
   private void addRepositories(Project project) {
     project.repositories {
       mavenLocal()
-      jcenter()
       mavenCentral()
       maven { url 'https://repo.spring.io/release' }
       maven { url 'https://repo.spring.io/milestone' }

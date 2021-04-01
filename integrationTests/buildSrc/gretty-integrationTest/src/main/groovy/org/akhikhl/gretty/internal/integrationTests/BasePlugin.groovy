@@ -71,7 +71,7 @@ class BasePlugin implements Plugin<Project> {
         name 'privateRepo'
         url "file:${project.privateRepoDir}"
       }
-      jcenter()
+      mavenCentral()
     }
   }
 
