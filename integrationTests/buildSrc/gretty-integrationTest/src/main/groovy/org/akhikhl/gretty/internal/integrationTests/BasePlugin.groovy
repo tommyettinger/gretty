@@ -4,6 +4,8 @@ import org.akhikhl.gretty.ServletContainerConfig
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.publish.maven.MavenPublication
+import org.gradle.api.tasks.testing.Test
+import org.gradle.util.GradleVersion
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -100,6 +102,12 @@ class BasePlugin implements Plugin<Project> {
       project.rootProject.task('wrapper', type: Wrapper) {
         gradleVersion = '6.8.3'
       }
+
+    project.tasks.withType(Test).configureEach {
+      if (GradleVersion.current().baseVersion.version.startsWith("7.")) {
+        useJUnitPlatform()
+      }
+    }
   }
 
   protected void configureTasksAfterEvaluate(Project project) {
