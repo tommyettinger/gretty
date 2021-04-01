@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture
 final class ServiceProtocol {
 
   static Reader createReader(int port  = 0) {
-    final ServerSocket serverSocket = new ServerSocket(port, 1, InetAddress.localHost)
+    final ServerSocket serverSocket = new ServerSocket(port, 1, InetAddress.loopbackAddress)
     return new Reader(serverSocket)
   }
 
@@ -73,7 +73,7 @@ final class ServiceProtocol {
 
     def write(final String command) {
       log.debug 'ServiceProtocol.send({}, {})', port, command
-      Socket s = new Socket(InetAddress.localHost, port)
+      Socket s = new Socket(InetAddress.loopbackAddress, port)
       try {
         OutputStream out = s.getOutputStream()
         out.write(("${command}\n<<EOF>>\n").getBytes(StandardCharsets.UTF_8))
