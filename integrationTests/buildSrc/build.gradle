@@ -42,7 +42,7 @@ subprojects {
       name 'private'
       url "file:/${project.rootProject.ext.privateRepoDir}"
     }
-    jcenter()
+    mavenCentral()
   }
 
   afterEvaluate {

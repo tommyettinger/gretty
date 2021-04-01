@@ -4,7 +4,7 @@ repositories {
   maven {
     url "file:$privateRepoDir"
   }
-  jcenter()
+  mavenCentral()
 }
 
 dependencies {

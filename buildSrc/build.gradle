@@ -4,7 +4,7 @@ plugins {
 
 repositories {
     gradlePluginPortal()
-    jcenter()
+    mavenCentral()
     maven {
         url 'https://dl.bintray.com/content/noamt/gradle-plugins'
     }

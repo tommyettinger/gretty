@@ -10,7 +10,7 @@ repositories {
     maven {
         url "file:${project.property("privateRepoDir")}"
     }
-    jcenter()
+    mavenCentral()
 }
 
 group = rootProject.group
