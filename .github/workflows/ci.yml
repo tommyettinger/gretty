@@ -10,10 +10,10 @@ jobs:
 
     strategy:
       matrix:
-        java: [8, 11]
+        java: [8, 11, 15]
         gradle: ["6.8.3"]
         include:
-          - java: 16
+          - java: 15
             gradle: "7.0-rc-1"
             properties: "-Pspock_version=2.0-M5-groovy-3.0 -PgebVersion=5.0-milestone-1"
 
