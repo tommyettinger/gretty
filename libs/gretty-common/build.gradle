@@ -3,9 +3,6 @@ plugins {
 }
 
 dependencies {
-	api "org.codehaus.groovy:groovy:$groovy_version"
-	api "org.codehaus.groovy:groovy-ant:$groovy_version"
-	api "org.codehaus.groovy:groovy-groovydoc:$groovy_version"
-	api "org.codehaus.groovy:groovy-templates:$groovy_version"
+	api localGroovy()
 	api "org.slf4j:slf4j-api:$slf4j_version"
 }

@@ -2,6 +2,7 @@ apply plugin: 'org.gretty'
 apply plugin: 'org.gretty.internal.integrationTests.IntegrationTestPlugin'
 
 dependencies {
+  implementation localGroovy()
   implementation 'org.webjars:sockjs-client:0.3.4-1'
   implementation 'org.webjars:stomp-websocket:2.3.3'
 }

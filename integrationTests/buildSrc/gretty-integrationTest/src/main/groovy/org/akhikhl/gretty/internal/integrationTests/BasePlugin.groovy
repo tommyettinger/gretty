@@ -76,7 +76,7 @@ class BasePlugin implements Plugin<Project> {
   }
 
   protected void configureRootProjectProperties(Project project) {
-    for(prop in ['gebVersion', 'geckoDriverVersion', 'geckoDriverPlatform', 'groovy_version', 'seleniumVersion', 'spock_version', 'testAllContainers']) {
+    for(prop in ['gebVersion', 'geckoDriverVersion', 'geckoDriverPlatform', 'seleniumVersion', 'spock_version', 'testAllContainers']) {
       if(!project.hasProperty(prop)) {
         project.ext[prop] = ProjectProperties.getString(prop)
       }

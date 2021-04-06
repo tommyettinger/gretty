@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+  api "org.codehaus.groovy:groovy-cli-commons:${GroovySystem.version}"
   api project(':libs:gretty-core')
 }
 

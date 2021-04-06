@@ -121,7 +121,6 @@ tasks.named("javadocJar", Jar).configure {
 
 afterEvaluate {
     dependencies {
-        testImplementation libs.groovy_all
         testImplementation libs.spock
     }
 

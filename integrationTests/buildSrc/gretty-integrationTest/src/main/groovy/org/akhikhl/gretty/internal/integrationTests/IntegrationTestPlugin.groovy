@@ -30,14 +30,8 @@ class IntegrationTestPlugin extends BasePlugin {
   protected void configureDependencies(Project project) {
     super.configureDependencies(project)
     project.dependencies {
-      integrationTestImplementation "org.codehaus.groovy:groovy:${project.groovy_version}"
-      integrationTestImplementation "org.codehaus.groovy:groovy-dateutil:${project.groovy_version}"
-      integrationTestImplementation "org.codehaus.groovy:groovy-groovysh:${project.groovy_version}"
-      integrationTestImplementation "org.codehaus.groovy:groovy-json:${project.groovy_version}"
-      integrationTestImplementation "org.codehaus.groovy:groovy-nio:${project.groovy_version}"
-      integrationTestImplementation "org.codehaus.groovy:groovy-macro:${project.groovy_version}"
-      integrationTestImplementation "org.codehaus.groovy:groovy-templates:${project.groovy_version}"
-      integrationTestImplementation "org.codehaus.groovy:groovy-xml:${project.groovy_version}"
+      integrationTestImplementation localGroovy()
+      integrationTestImplementation "org.codehaus.groovy:groovy-macro:${GroovySystem.version}"
       integrationTestImplementation project.dependencies.create("org.spockframework:spock-core:${project.spock_version}") {
         exclude module: "groovy-all"
       }

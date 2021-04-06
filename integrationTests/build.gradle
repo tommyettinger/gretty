@@ -40,16 +40,3 @@ wrapper {
   gradleVersion = '6.8.3'
   distributionType = Wrapper.DistributionType.ALL
 }
-
-ext.libs = [
-  groovy_all: [
-    "org.codehaus.groovy:groovy:${groovy_version}",
-    "org.codehaus.groovy:groovy-dateutil:${groovy_version}",
-    "org.codehaus.groovy:groovy-groovysh:${groovy_version}",
-    "org.codehaus.groovy:groovy-json:${groovy_version}",
-    "org.codehaus.groovy:groovy-nio:${groovy_version}",
-    "org.codehaus.groovy:groovy-macro:${groovy_version}",
-    "org.codehaus.groovy:groovy-templates:${groovy_version}",
-    "org.codehaus.groovy:groovy-xml:${groovy_version}",
-  ]
-]
