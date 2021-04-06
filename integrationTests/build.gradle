@@ -35,8 +35,3 @@ buildscript {
 allprojects {
   version = rootProject.ext.parentGradleProps.version
 }
-
-wrapper {
-  gradleVersion = '6.8.3'
-  distributionType = Wrapper.DistributionType.ALL
-}

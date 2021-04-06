@@ -98,11 +98,6 @@ class BasePlugin implements Plugin<Project> {
     if(!project.rootProject.tasks.findByName('testAll'))
       project.rootProject.task 'testAll'
 
-    if(!project.rootProject.tasks.findByName('wrapper'))
-      project.rootProject.task('wrapper', type: Wrapper) {
-        gradleVersion = '6.8.3'
-      }
-
     project.tasks.withType(Test).configureEach {
       if (GradleVersion.current().baseVersion.version.startsWith("7.")) {
         useJUnitPlatform()
