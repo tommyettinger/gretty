@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-  api libs.groovy_all
+  api localGroovy()
   api libs.spock
   api 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
 }
