@@ -212,6 +212,9 @@ class JettyConfigurerImpl implements JettyConfigurer {
       include 'org.codehaus.groovy.'
       include 'groovy.'
       include 'groovyx.'
+      include 'groovyjarjarantlr.'
+      include 'groovyjarjarasm.'
+      include 'groovyjarjarcommonscli.'
     })
 
     context.addSystemClassMatcher(new ClassMatcher().tap {
