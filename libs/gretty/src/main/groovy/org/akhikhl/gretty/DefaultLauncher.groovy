@@ -130,7 +130,7 @@ class DefaultLauncher extends LauncherBase {
       }
       spec.jvmArgs jvmArgs
       spec.systemProperties params.systemProperties
-      spec.main = params.main
+      spec.mainClass.set(params.main)
       spec.args = params.args
     }
   }
