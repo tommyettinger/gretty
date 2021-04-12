@@ -12,6 +12,8 @@ It wraps servlet container functions as convenient Gradle tasks and configuratio
 
 A complete list of Gretty features is available in [feature overview](https://gretty-gradle-plugin.github.io/gretty-doc/Feature-overview.html).
 
+You are looking at Gretty's `master` branch which is for Gretty 4. You also might want to look at the [gretty-3.x](https://github.com/gretty-gradle-plugin/gretty/tree/gretty-3.x) one which is for Gretty 3. It is still in development and supports older (non-Jakarta) versions of Jetty and Tomcat.
+
 #### Where to start
 
 [![Join the chat at https://gitter.im/gretty-gradle-plugin/gretty](https://badges.gitter.im/gretty-gradle-plugin/gretty.svg)](https://gitter.im/gretty-gradle-plugin/gretty?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
