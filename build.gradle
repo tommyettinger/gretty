@@ -129,3 +129,12 @@ ext.libs = [
     exclude module: "groovy-all"
   }
 ]
+
+
+if(JavaVersion.current().isJava9Compatible()) {
+  allprojects {
+    tasks.withType(JavaCompile) {
+      options.release.set(8)
+    }
+  }
+}
