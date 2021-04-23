@@ -88,7 +88,7 @@ class GrettyPlugin implements Plugin<Project> {
     String logbackVersion = project.gretty.logbackVersion ?: (project.hasProperty('logbackVersion') ? project.logbackVersion :Externalized.getString('logbackVersion'))
 
     project.dependencies {
-      grettyStarter "org.gretty:gretty-starter:$grettyVersion"
+      grettyStarter "com.github.tommyettinger.gretty:gretty-starter:$grettyVersion"
       grettySpringLoaded "org.springframework:springloaded:$springLoadedVersion"
     }
 
@@ -118,7 +118,7 @@ class GrettyPlugin implements Plugin<Project> {
       project.dependencies.add configName, "org.springframework:spring-websocket:$springVersion"
       project.dependencies.add configName, "ch.qos.logback:logback-classic:$logbackVersion"
       configName = project.configurations.findByName('runtimeOnly') ? 'runtimeOnly' : 'springBoot'
-      project.dependencies.add configName, "org.gretty:gretty-springboot:$grettyVersion"
+      project.dependencies.add configName, "com.github.tommyettinger.gretty:gretty-springboot:$grettyVersion"
     }
 
     for(String overlay in project.gretty.overlays)
