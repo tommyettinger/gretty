@@ -65,7 +65,7 @@ ext.configurePublications = { String publicationName ->
         dependsOn "publish${capitalizedPublicationName}PublicationToPrivateRepository"
     }
     project.tasks.build.dependsOn project.tasks.publishToPrivateRepository
-    rootProject.tasks.testAllIntegrationTests.dependsOn project.tasks.publishToPrivateRepository
+//    rootProject.tasks.testAllIntegrationTests.dependsOn project.tasks.publishToPrivateRepository
 
     tasks.artifactoryPublish {
         dependsOn { project.tasks."generatePomFileFor${capitalizedPublicationName}Publication" }

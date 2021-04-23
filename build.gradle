@@ -74,36 +74,36 @@ if (!bintrayDryRun)
     contentType = ContentType.JSON
   }
 
-task testAll(dependsOn: tasks.build)
-
-task testAllIntegrationTests(type: GradleBuild) {
-  dir = file('integrationTests')
-  tasks = [ 'testAll' ]
-  startParameter.projectProperties = [:]
-  if (project.hasProperty('geckoDriverPlatform')) {
-    startParameter.projectProperties.put('geckoDriverPlatform', project.geckoDriverPlatform)
-  }
-  if (project.hasProperty('geckoDriverVersion')) {
-    startParameter.projectProperties.put('geckoDriverVersion', project.geckoDriverVersion)
-  }
-  if (project.hasProperty('seleniumVersion')) {
-    startParameter.projectProperties.put('seleniumVersion', project.seleniumVersion)
-  }
-  if (project.hasProperty('gebVersion')) {
-    startParameter.projectProperties.put('gebVersion', project.gebVersion)
-  }
-  if (project.hasProperty('testAllContainers')) {
-    startParameter.projectProperties.put('testAllContainers', project.testAllContainers)
-  }
-  project.tasks.testAll.finalizedBy it
-  onlyIf { !project.tasks.testAll.getState().getFailure() }
-}
-
-task cleanIntegrationTests(type: GradleBuild) {
-  dir = file('integrationTests')
-  tasks = [ 'clean' ]
-  project.tasks.clean.dependsOn it
-}
+//task testAll(dependsOn: tasks.build)
+//
+//task testAllIntegrationTests(type: GradleBuild) {
+//  dir = file('integrationTests')
+//  tasks = [ 'testAll' ]
+//  startParameter.projectProperties = [:]
+//  if (project.hasProperty('geckoDriverPlatform')) {
+//    startParameter.projectProperties.put('geckoDriverPlatform', project.geckoDriverPlatform)
+//  }
+//  if (project.hasProperty('geckoDriverVersion')) {
+//    startParameter.projectProperties.put('geckoDriverVersion', project.geckoDriverVersion)
+//  }
+//  if (project.hasProperty('seleniumVersion')) {
+//    startParameter.projectProperties.put('seleniumVersion', project.seleniumVersion)
+//  }
+//  if (project.hasProperty('gebVersion')) {
+//    startParameter.projectProperties.put('gebVersion', project.gebVersion)
+//  }
+//  if (project.hasProperty('testAllContainers')) {
+//    startParameter.projectProperties.put('testAllContainers', project.testAllContainers)
+//  }
+//  project.tasks.testAll.finalizedBy it
+//  onlyIf { !project.tasks.testAll.getState().getFailure() }
+//}
+//
+//task cleanIntegrationTests(type: GradleBuild) {
+//  dir = file('integrationTests')
+//  tasks = [ 'clean' ]
+//  project.tasks.clean.dependsOn it
+//}
 
 artifactory {
   contextUrl = artifactory_contextUrl

@@ -27,7 +27,7 @@ buildscript {
   }
 
   dependencies {
-    classpath "org.gretty:gretty:${parentGradleProps.grettyVersion}"
+    classpath "com.github.tommyettinger.gretty:gretty:${parentGradleProps.grettyVersion}"
     classpath "org.gretty.internal.integrationTests:gretty-integrationTest:${parentGradleProps.grettyVersion}"
   }
 }
